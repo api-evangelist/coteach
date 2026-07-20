@@ -1,0 +1,45 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.coteach.ai/.well-known/oauth-authorization-server
+docs: https://www.coteach.ai/.well-known/openid-configuration
+summary:
+  types:
+  - oauth2
+  - openIdConnect
+  oauth2_flows:
+  - authorizationCode
+  pkce: S256
+  dynamic_client_registration: true
+  public_client: true
+schemes:
+- name: OAuth2
+  type: oauth2
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://www.coteach.ai/api/oauth/authorize
+    tokenUrl: https://www.coteach.ai/api/oauth/token
+    registrationUrl: https://www.coteach.ai/api/oauth/register
+    pkce: S256
+    grant_types:
+    - authorization_code
+    - refresh_token
+    token_endpoint_auth_methods:
+    - none
+    scopes:
+    - openid
+    - email
+    - profile
+    - offline_access
+  sources:
+  - https://www.coteach.ai/.well-known/oauth-authorization-server
+- name: OpenIDConnect
+  type: openIdConnect
+  openIdConnectUrl: https://www.coteach.ai/.well-known/openid-configuration
+  issuer: https://www.coteach.ai
+  sources:
+  - https://www.coteach.ai/.well-known/openid-configuration
+notes: Derived from CoTeach's published OIDC discovery and RFC 8414 authorization-server
+  metadata. Public-client authorization-code flow with PKCE (S256) and RFC 7591
+  dynamic client registration; this is the auth surface protecting the hosted MCP
+  server. No OpenAPI is published, so this profile is sourced entirely from the
+  live .well-known documents.
