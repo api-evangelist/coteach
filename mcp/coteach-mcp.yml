@@ -1,0 +1,33 @@
+generated: '2026-07-18'
+method: searched
+status: published
+source: https://www.coteach.ai/api/mcp
+server:
+  name: Coteach Claude connector
+  transport: http
+  url: https://www.coteach.ai/api/mcp
+  authentication:
+    type: oauth2
+    flow: authorizationCode
+    pkce: S256
+    dynamic_client_registration: true
+    authorization_endpoint: https://www.coteach.ai/api/oauth/authorize
+    token_endpoint: https://www.coteach.ai/api/oauth/token
+    registration_endpoint: https://www.coteach.ai/api/oauth/register
+    protected_resource_metadata: https://www.coteach.ai/.well-known/oauth-protected-resource
+    scopes:
+    - openid
+    - email
+    - profile
+evidence:
+- source: https://www.coteach.ai/api/mcp
+  detail: 'HTTP 401 with WWW-Authenticate: Bearer error="invalid_token",
+    error_description="Authentication required for the Coteach Claude connector",
+    resource_metadata="https://www.coteach.ai/api/.well-known/oauth-protected-resource",
+    scope="openid email profile"'
+- source: https://www.coteach.ai/.well-known/oauth-protected-resource
+  detail: 'resource=https://www.coteach.ai/api/mcp; bearer_methods_supported=[header]'
+tools: []
+notes: Official hosted, OAuth-protected MCP server. The tool list is gated behind
+  OAuth (dynamic client registration + PKCE) and was not enumerable during an
+  unauthenticated probe, so no tools are asserted here (no fabrication).

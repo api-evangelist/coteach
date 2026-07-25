@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.coteach.ai/.well-known/
+host: https://www.coteach.ai
+documents:
+- path: /.well-known/openid-configuration
+  status: 200
+  file: coteach-openid-configuration.json
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  file: coteach-oauth-authorization-server.json
+- path: /.well-known/oauth-protected-resource
+  status: 200
+  file: coteach-oauth-protected-resource.json
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+notes: CoTeach exposes OIDC discovery, an RFC 8414 OAuth authorization-server
+  document, and an RFC 9728 OAuth protected-resource document pointing at the
+  hosted MCP server at /api/mcp (the "Coteach Claude connector").

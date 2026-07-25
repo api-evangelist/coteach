@@ -1,7 +1,27 @@
 aid: coteach
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/coteach.png
 name: CoTeach
-description: CoTeach is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: CoTeach is an AI-powered curriculum co-planning assistant for K-12 mathematics teachers,
+  built by Teaching Lab and deeply integrated with the Illustrative Mathematics (IM v.360) curriculum.
+  Through a chat interface, teachers adapt lessons, generate curriculum-aligned practice problems and
+  worksheets, build scaffolds and differentiated supports for multilingual learners and students with
+  IEPs, and produce IM-style math diagrams (number lines, tape diagrams, area models), exporting to PDF
+  or Google Docs. CoTeach preserves IM's pedagogical framework, collects no student data, and meters
+  usage by message credits. It also exposes a hosted, OAuth-protected Model Context Protocol (MCP)
+  server (the "Coteach Claude connector") and publishes an llms.txt so AI agents can discover the
+  product and hand off to it.
 url: https://raw.githubusercontent.com/api-evangelist/coteach/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +31,19 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
+- Education
+- EdTech
+- Mathematics
+- K-12
+- Teachers
+- Curriculum
+- Lesson Planning
+- AI Assistant
+- Illustrative Mathematics
+- MCP
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +51,38 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/coteach-domain-security.yml
 - type: Website
-  url: https://jackett.io
+  url: https://www.coteach.ai
+- type: Pricing
+  url: https://www.coteach.ai/pricing
+- type: Login
+  url: https://www.coteach.ai/chat?login=true
+- type: TermsOfService
+  url: https://www.coteach.ai/terms
+- type: PrivacyPolicy
+  url: https://www.coteach.ai/privacy
+- type: Blog
+  url: https://www.coteach.ai/blog
+- type: Support
+  url: https://www.coteach.ai/faqs
+- type: Roadmap
+  url: https://coteach.feedbear.com/roadmap
+- type: LLMsTxt
+  url: llms/coteach-llms.txt
+- type: WellKnown
+  url: well-known/coteach-well-known.yml
+- type: MCPServer
+  url: mcp/coteach-mcp.yml
+- type: Authentication
+  url: authentication/coteach-authentication.yml
+- type: OAuthScopes
+  url: scopes/coteach-scopes.yml
+- type: Conformance
+  url: conformance/coteach-conformance.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

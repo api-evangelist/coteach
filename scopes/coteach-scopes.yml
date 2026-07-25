@@ -1,0 +1,39 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.coteach.ai/.well-known/oauth-authorization-server
+docs: https://www.coteach.ai/.well-known/oauth-protected-resource
+schemes:
+- name: OAuth2
+  source: https://www.coteach.ai/.well-known/oauth-authorization-server
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://www.coteach.ai/api/oauth/authorize
+    tokenUrl: https://www.coteach.ai/api/oauth/token
+scopes:
+- scope: openid
+  description: OpenID Connect authentication; issue an ID token identifying the user.
+  flows:
+  - authorizationCode
+  sources:
+  - https://www.coteach.ai/.well-known/oauth-authorization-server
+- scope: email
+  description: Access to the authenticated user's email address.
+  flows:
+  - authorizationCode
+  sources:
+  - https://www.coteach.ai/.well-known/oauth-authorization-server
+- scope: profile
+  description: Access to the authenticated user's basic profile information.
+  flows:
+  - authorizationCode
+  sources:
+  - https://www.coteach.ai/.well-known/oauth-authorization-server
+- scope: offline_access
+  description: Issue a refresh token for long-lived, offline access.
+  flows:
+  - authorizationCode
+  sources:
+  - https://www.coteach.ai/.well-known/oauth-authorization-server
+notes: Scopes advertised by CoTeach's OAuth authorization server. The protected-resource
+  metadata for the MCP server (/api/mcp) requires the openid, email, and profile
+  scopes; offline_access is additionally offered for refresh tokens.
