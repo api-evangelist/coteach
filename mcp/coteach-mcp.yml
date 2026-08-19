@@ -21,13 +21,19 @@ server:
     - profile
 evidence:
 - source: https://www.coteach.ai/api/mcp
-  detail: 'HTTP 401 with WWW-Authenticate: Bearer error="invalid_token",
-    error_description="Authentication required for the Coteach Claude connector",
-    resource_metadata="https://www.coteach.ai/api/.well-known/oauth-protected-resource",
+  detail: 'HTTP 401 with WWW-Authenticate: Bearer error="invalid_token", error_description="Authentication
+    required for the Coteach Claude connector", resource_metadata="https://www.coteach.ai/api/.well-known/oauth-protected-resource",
     scope="openid email profile"'
 - source: https://www.coteach.ai/.well-known/oauth-protected-resource
-  detail: 'resource=https://www.coteach.ai/api/mcp; bearer_methods_supported=[header]'
+  detail: resource=https://www.coteach.ai/api/mcp; bearer_methods_supported=[header]
 tools: []
-notes: Official hosted, OAuth-protected MCP server. The tool list is gated behind
-  OAuth (dynamic client registration + PKCE) and was not enumerable during an
-  unauthenticated probe, so no tools are asserted here (no fabrication).
+notes: Official hosted, OAuth-protected MCP server. The tool list is gated behind OAuth (dynamic client
+  registration + PKCE) and was not enumerable during an unauthenticated probe, so no tools are asserted
+  here (no fabrication).
+deployment:
+  mode: remote
+  endpoint: https://www.coteach.ai/api/mcp
+  verified: probed
+  probe: gated
+  checked: '2026-08-12'
+  source: catalog MCP census
