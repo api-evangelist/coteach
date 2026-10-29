@@ -64,10 +64,99 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-CoTeach is an AI-powered curriculum co-planning assistant for K-12 mathematics teachers, built by Teaching Lab and integrated with the Illustrative Mathematics (IM v.360) curriculum. Teachers use its chat interface to adapt lessons, generate curriculum-aligned practice problems, build scaffolds and differentiated supports, and produce IM-style math diagrams.
+CoTeach is an AI-powered curriculum co-planning assistant for K-12 mathematics teachers, built by Teaching Lab and deeply integrated with the Illustrative Mathematics (IM v.360) curriculum. Through a chat interface, teachers adapt lessons, generate curriculum-aligned practice problems and worksheets, build scaffolds and differentiated supports for multilingual learners and students with IEPs, and produce IM-style math diagrams (number lines, tape diagrams, area models), exporting to PDF or Google Docs. CoTeach preserves IM's pedagogical framework, collects no student data, and meters usage by message credits. It also exposes a hosted, OAuth-protected Model Context Protocol (MCP) server (the "Coteach Claude connector") and publishes an llms.txt so AI agents can discover the product and hand off to it.
 
-Website: https://www.coteach.ai
+**Areas:** Company · Education · EdTech · Mathematics · K-12 · Teachers · Curriculum · Lesson Planning · AI Assistant · Illustrative Mathematics · MCP
 
-It exposes a hosted, OAuth-protected Model Context Protocol (MCP) server (the "Coteach Claude connector") at https://www.coteach.ai/api/mcp and publishes an llms.txt for AI-agent discovery.
+## CoTeach on APIs.io
 
-Backed by: 500 Global — https://500.co
+Everything profiled for CoTeach is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/coteach/](https://apis.io/providers/coteach/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [Coteach Claude connector](https://apis.io/servers/coteach/coteach-claude-connector/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Coteach Authentication](https://apis.io/security/coteach/coteach-authentication/)
+- [Coteach Domain Security](https://apis.io/security/coteach/coteach-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Coteach Scopes](https://apis.io/scopes/coteach/coteach-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.coteach.ai)
+- [Pricing](https://www.coteach.ai/pricing)
+- [Support](https://www.coteach.ai/faqs)
+- [Blog](https://www.coteach.ai/blog)
+- [Terms of service](https://www.coteach.ai/terms)
+- [Privacy policy](https://www.coteach.ai/privacy)
+
+## API Evangelist rating
+
+**Kin Score 22.5** — emerging · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 58.3 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 19.0 |
+| Access clarity | 38.2 |
+
+**Agent readiness 27.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 34.3** — Education & Research
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/coteach/](https://apis.io/providers/coteach/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for CoTeach: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/coteach/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
